@@ -1,0 +1,53 @@
+[project]
+name = "multiclinsum2-evaluation"
+version = "0.1.0"
+description = "Evaluation framework for MultiClinSum 2"
+readme = "README.md"
+requires-python = ">=3.11,<3.14"
+dependencies = [
+    # Core
+    "pydantic>=2.0.0",
+    # Classic metrics
+    "rouge-score>=0.1.2",
+    "bert-score>=0.3.13",
+    # Neural metrics (BARTScore / BERTScore backbone / SummaC)
+    "torch>=2.5.0",
+    "transformers>=4.40.0",
+    "sentencepiece",
+    "huggingface-hub>=0.20.0",
+    "summac",
+    # Utilities
+    "numpy>=1.26.0",
+]
+# summac hard-pins torch==2.1.1 in its metadata, but the override-dependencies
+# block below forces uv to use torch>=2.5.0 instead — no manual install needed.
+
+[project.optional-dependencies]
+analysis = [
+    "plotly>=5.18.0",
+    "nbformat>=4.2.0",
+    "jupyter>=1.0.0",
+]
+
+[tool.uv.sources]
+torch = [
+    { index = "pytorch-gpu", marker = "sys_platform == 'linux'" },
+]
+
+[[tool.uv.index]]
+name = "pytorch-gpu"
+url = "https://download.pytorch.org/whl/cu121"
+explicit = true
+
+[dependency-groups]
+dev = [
+    "pytest>=9.0.3",
+]
+
+[tool.uv]
+override-dependencies = [
+    "torch>=2.5.0",
+    "numpy>=1.26",
+    "huggingface-hub>=0.20.0",
+    "transformers>=4.40.0",
+]

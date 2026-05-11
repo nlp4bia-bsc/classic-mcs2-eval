@@ -1,0 +1,48 @@
+# ── Evaluation results ─────────────────────────
+outputs/
+submissions/
+
+# ── MN job and logs ───────────────────────────────────────────────────────────
+jobs/logs/
+jobs/
+
+# ── Python virtual environments ──────────────────────────────────────────────
+eval_venv/
+eval_venv_vllm/
+venv/
+.venv/
+
+# ── python cache ─────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+
+# ── Jupyter notebooks and checkpoints ───────────────────────────────────────
+*.ipynb
+.ipynb_checkpoints/
+*_executed.ipynb
+
+# ── Participant submission inputs (unpacked zips) ────────────────────────────
+inputs/
+
+# ── Model cache / HuggingFace snapshots ──────────────────────────────────────
+.cache/
+hf_cache/
+
+# Images
+*.png
+
+# ── OS / editor noise ────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.ipynb
+*.swo
+
+# Other:
+README_technical.md
+evaluation_notes.txt
