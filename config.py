@@ -15,7 +15,7 @@ from __future__ import annotations
 # BERTScore config
 # ---------------------------------------------------------------------------
 
-BERTSCORE_MODEL: str = "/gpfs/projects/bsc88/NLP4BIA/bsc088665/hf_models/mdeberta-v3-base"
+BERTSCORE_MODEL: str = "microsoft/mdeberta-v3-base"
 # Multilingual DeBERTa — supports all 15 evaluation languages out of the box.
 # Set to "microsoft/mdeberta-v3-base" to download from HuggingFace Hub.
 # HuggingFace Hub name OR absolute path to a local model snapshot.
