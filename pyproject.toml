@@ -12,7 +12,7 @@ dependencies = [
     "bert-score>=0.3.13",
     # Neural metrics (BARTScore / BERTScore backbone / SummaC)
     "torch>=2.6.0",
-    "transformers>=4.40.0",
+    "transformers>=4.40.0,<4.49.0",
     "sentencepiece",
     "huggingface-hub>=0.20.0",
     # Utilities
@@ -53,5 +53,5 @@ override-dependencies = [
     "torch>=2.6.0",
     "numpy>=1.26",
     "huggingface-hub>=0.20.0",
-    "transformers>=4.40.0",
+    "transformers>=4.40.0,<4.49.0",
 ]
