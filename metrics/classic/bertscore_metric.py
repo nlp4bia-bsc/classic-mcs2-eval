@@ -64,6 +64,7 @@ class BERTScoreMetric(BaseMetric):
                 num_layers=config.BERTSCORE_NUM_LAYERS,
                 lang=self.language,
                 rescale_with_baseline=config.BERTSCORE_RESCALE_BASELINE,
+                use_fast_tokenizer=False,
                 verbose=False,
             )
             all_f1.extend([max(0.0, min(1.0, round(float(v), 6))) for v in f1])
